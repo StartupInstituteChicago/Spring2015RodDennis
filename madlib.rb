@@ -1,24 +1,19 @@
-puts 'Enter a noun (plural):'
+puts "Noun (plural):"
 noun1 = gets.chomp.upcase
 
-puts 'Name an occupation'
-job = gets.chomp.upcase
+puts "Occupation:"
+occupation = gets.chomp.upcase
 
-puts 'Name an animal (plural):'
+puts "Animal (plural):"
 animal = gets.chomp.upcase
 
-puts 'Name a place:'
-place = gets.chomp.upcase
+puts "City:"
+city = gets.chomp.upcase
 
-puts 'Enter a verb:'
+puts "Verb:"
 verb = gets.chomp.upcase
 
-puts 'Enter a noun:'
+puts "Noun:"
 noun2 = gets.chomp.upcase
 
-puts '
-####################
-Here is your Madlib!
-####################
-
-In the book War of the ' + noun1 + ', the main character is an anonymous ' + job + ' who records the arrival of ' + animal + ' in ' + place + '. Needless to say, havoc reigns as the ' + animal + ' continue to ' + verb + ' everything in sight, until they are killed by the common ' + noun2 + '.'
+"In the book War of the #{noun1}, the main character is an anonymous #{occupation} who records the arrival of #{animal} in #{city}. Needless to say, havoc reigns as the #{animal} continue to #{verb} everything in sight, until they are killed by the common #{noun2}."
