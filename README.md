@@ -1,3 +1,3 @@
 # Rodney Dennis
 
-This is where I keep all my RampUp stuffs :)
+This is where I keep all my RampUp stuffs
