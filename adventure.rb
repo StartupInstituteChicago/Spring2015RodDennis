@@ -1,12 +1,5 @@
 # weapons: name, strength
-# enimies: name, strength, health
 # path: name, num of enimies, health, num of weapons
-# hero: name, health, strength,
-
-# class Weapons
-#   @name = name
-#   @strength = strength
-# end
 
 class Player
   attr_accessor :name
@@ -20,27 +13,24 @@ class Player
   end
 end
 
-class Hero < Player
+def battle(player, computer)
+  computer.health -= player.strength
+  player.health -= computer.strength
+  # battle summary
+  puts "#{player.name} and #{computer.name} did battle!"
+  puts "#{player.name} has #{player.health} health remaining and #{computer.name} has #{computer.health} health remaining."
 end
 
-class Enemy < Player
-end
+###
+# start the game
+###
 
-class Paths
-end
+# get the hero's name
+puts "Welcome to Steve's Awful Adventure"
+steve = Player.new("Steve", 100, rand(10..20))
+puts "#{steve.name} [Health #{steve.health}] [Strength #{steve.strength}]"
 
-def battle(hero, enemy)
-  enemy.health -= hero.strength
-  hero.health -= enemy.strength
-  puts "#{hero.name} and #{enemy.name} did battle!"
-  puts "#{hero.name} has #{hero.health} health remaining and #{enemy.name} has #{enemy.health} health remaining."
-end
+# gronk = Player.new("Gronk", 100, rand(10..20))
+# puts "Your enemy #{gronk.name}, has #{gronk.health} health and #{gronk.strength} strength"
 
-steve = Hero.new("Steve", 10, rand(1..5))
-puts "Your hero #{steve.name}, has #{steve.health} health and #{steve.strength} strength"
-
-gronk = Enemy.new("Gronk", 15, rand(1..10))
-puts "Your enemy #{gronk.name}, has #{gronk.health} health and #{gronk.strength} strength"
-
-battle(steve, gronk)
-
+# battle(steve, gronk)
